@@ -47,7 +47,7 @@ public class Layer implements Selector {
     return selector.getDirectionsByPosition(position);
   }
 
-  public Divider getDivider() {
+  Divider getDivider() {
     return divider;
   }
 }

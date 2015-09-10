@@ -74,8 +74,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
    * |___| ___| ___|
    */
   private void drawDivider(Canvas canvas, View view, Divider divider, Position position) {
-    EnumSet<Direction> directions =
-        EnumSet.of(Direction.EAST, Direction.SOUTH_EAST, Direction.SOUTH);
+    EnumSet<Direction> directions = Direction.SOUTH_EAST_CORNER;
 
     if (position.getColumn() == 0) {
       directions.add(Direction.SOUTH_WEST);

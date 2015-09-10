@@ -16,6 +16,8 @@
 
 package com.karumi.dividers;
 
+import java.util.EnumSet;
+
 /**
  * All the possible directions to move through a grid.
  */
@@ -27,5 +29,14 @@ public enum Direction {
   EAST,
   SOUTH_EAST,
   SOUTH,
-  SOUTH_WEST
+  SOUTH_WEST;
+
+  public static EnumSet<Direction> ALL_NORTH = EnumSet.of(NORTH_WEST, NORTH, NORTH_EAST);
+  public static EnumSet<Direction> ALL_SOUTH = EnumSet.of(SOUTH_WEST, SOUTH, SOUTH_EAST);
+  public static EnumSet<Direction> ALL_WEST = EnumSet.of(SOUTH_WEST, WEST, NORTH_WEST);
+  public static EnumSet<Direction> ALL_EAST = EnumSet.of(NORTH_EAST, EAST, SOUTH_EAST);
+  public static EnumSet<Direction> NORTH_WEST_CORNER = EnumSet.of(WEST, NORTH_WEST, NORTH);
+  public static EnumSet<Direction> NORTH_EAST_CORNER = EnumSet.of(NORTH, NORTH_EAST, EAST);
+  public static EnumSet<Direction> SOUTH_EAST_CORNER = EnumSet.of(EAST, SOUTH_EAST, SOUTH);
+  public static EnumSet<Direction> SOUTH_WEST_CORNER = EnumSet.of(SOUTH, SOUTH_WEST, WEST);
 }

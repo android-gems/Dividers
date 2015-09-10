@@ -96,9 +96,10 @@ class DividerMap {
     int depth = 0;
     for (Layer layer : layers) {
       if (layer.isPositionSelected(position)) {
-        itemDivider =
-            itemDivider.override(layer.getDivider(), layer.getDirectionsByPosition(position),
-                depth);
+        itemDivider = itemDivider.override(
+            layer.getDivider(),
+            layer.getDirectionsByPosition(position),
+            depth);
       }
       depth += 1;
     }
